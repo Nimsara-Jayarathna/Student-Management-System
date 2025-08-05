@@ -7,5 +7,15 @@ public class Student {
         this.name = name;
     }
 
-    // Implement the methods below
+    public String getId() {
+	return id;
+    }
+
+    public String getName(){
+	return name;
+    }
+
+    public String toString() {
+	return ("Student ID: " + id + ", Student Name: " + name + ".");
+    }
 }
