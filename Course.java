@@ -7,5 +7,15 @@ public class Course {
         this.title = title;
     }
 
-    // Implement the methods below
+    public String getCode() {
+	return code;
+    }
+
+    public String getTitle() {
+	return title;
+    }
+
+    public String toString() {
+	    return "Course Title: " + title + " Course Code " + code + ".";
+    }
 }
