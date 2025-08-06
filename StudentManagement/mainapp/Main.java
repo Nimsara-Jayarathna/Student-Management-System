@@ -9,10 +9,7 @@ public class Main {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Welcome to the Student Management System");
-		Student[] students = new Student[100];
-		Course[] courses = new Course[50];
-		int studentCount = 0;
-		int courseCount = 0;
+		EnrollmentManager enrollmentManager = new EnrollmentManager();
 		int opt,opt1;
 		while(true) {
 			System.out.println("1. Enroll");
@@ -49,7 +46,7 @@ public class Main {
 					}
 					switch (opt1) {
 						case 1:
-							if (studentCount >= 100) {
+							if (enrollmentManager.getStudentCount() >= 100) {
 								System.out.println("Exceded Students limit!");
 								break;
 							}
@@ -57,13 +54,10 @@ public class Main {
 							String id = sc.nextLine();
 							System.out.print("Enter Student Name: ");
 							String name = sc.nextLine();
-							students[studentCount] = new Student(id, name);
-							System.out.println(students[studentCount].toString());
-							studentCount++;
-							System.out.println("Student added successfully.");
+							enrollmentManager.addStudent(id, name);
 							break;
 						case 2:
-							if (courseCount >= 50) {
+							if (enrollmentManager.getCourseCount() >=50) {
 								System.out.println("Exceded Courses limit!");
 								break;
 							}
@@ -71,39 +65,11 @@ public class Main {
 							String code = sc.nextLine();
 							System.out.print("Enter course title: ");
 							String title = sc.nextLine();
-							courses[courseCount] = new Course(code, title);
-							System.out.println(courses[courseCount].toString());
-							courseCount++;
-							System.out.println("Course added successfully.");
+							enrollmentManager.addCourse(code, title);
 							break;
 						case 3:
-							if ((studentCount == 0 ) || (courseCount == 0)) {
-								System.out.println("No Students or Courses available to enroll.");
-								break;
-							}
-							for ( int i = 0; i < studentCount; i++) {
-								System.out.println((i + 1) + ". " + students[i].toString());
-							}
-							System.out.print("Select the number which the student details are displayed");
-							int studentIndex = sc.nextInt(); sc.nextLine();
-							studentIndex--; // Adjust for zero-based index
-							while (studentIndex < 0 || studentIndex >= studentCount) {
-								System.out.println("Invalid student selection. PLease enter again: ");
-								studentIndex = sc.nextInt(); sc.nextLine();
-								studentIndex--; // Adjust for zero-based index
-							}
-							for ( int i = 0; i < courseCount; i++) {
-								System.out.println((i + 1) + ". " + courses[i].toString());
-							}
-							System.out.print("Select the number which the course details are displayed");
-							int courseIndex = sc.nextInt(); sc.nextLine();
-							courseIndex--; // Adjust for zero-based index
-							while (courseIndex < 0 || courseIndex >= courseIndex) {
-								System.out.println("Invalid course selection. PLease enter again: ");
-								courseIndex = sc.nextInt(); sc.nextLine();
-								courseIndex--; // Adjust for zero-based index
-							}
 							
+
 
 							break;
 					}					
