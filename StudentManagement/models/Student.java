@@ -1,3 +1,9 @@
+package StudentManagement.models;
+
+import StudentManagement.mainapp.Main;
+import StudentManagement.models.Course;
+import StudentManagement.services.EnrollmentManager;
+
 public class Student {
     private String id;
     private String name;
