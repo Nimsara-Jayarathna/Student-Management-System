@@ -53,7 +53,7 @@ public class EnrollmentManager {
 		int studentIndex = sc.nextInt(); sc.nextLine();
 		studentIndex--; // Adjust for zero-based index
 		while (studentIndex < 0 || studentIndex >= studentCount) {
-			System.out.println("Invalid student selection. PLease enter again: ");
+			System.out.println("Invalid student selection. Please enter again: ");
 			studentIndex = sc.nextInt(); sc.nextLine();
 			studentIndex--; // Adjust for zero-based index
 		}
@@ -63,8 +63,8 @@ public class EnrollmentManager {
 		System.out.print("Select the number which the course details are displayed");
 		int courseIndex = sc.nextInt(); sc.nextLine();
 		courseIndex--; // Adjust for zero-based index
-		while (courseIndex < 0 || courseIndex >= courseIndex) {
-			System.out.println("Invalid course selection. PLease enter again: ");
+		while (courseIndex < 0 || courseIndex >= courseCount) {
+			System.out.println("Invalid course selection. Please enter again: ");
 			courseIndex = sc.nextInt(); sc.nextLine();
 			courseIndex--; // Adjust for zero-based index
 		}

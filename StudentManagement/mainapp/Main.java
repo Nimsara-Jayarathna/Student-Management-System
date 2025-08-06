@@ -79,6 +79,14 @@ public class Main {
 					System.out.println("1. Search Student");
 					System.out.println("2. Search Course");
 					opt2 = sc.nextInt(); sc.nextLine();
+					while ((opt2 < 1) && (opt2 > 2)) {
+						/**
+						 * Input Validation of the options and loop iterate until the correct input is entered.
+						 * @input
+						 */
+						System.out.print("Invalid Response. Please Enter again: ");
+						opt2 = sc.nextInt(); sc.nextLine();
+					}
 					switch (opt2) {
 						case 1:
 							System.out.print("Enter Student ID to search: ");
