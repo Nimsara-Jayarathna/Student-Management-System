@@ -1,7 +1,5 @@
 package StudentManagement.mainapp;
 
-import StudentManagement.models.Student;
-import StudentManagement.models.Course;
 import StudentManagement.services.EnrollmentManager;
 import java.util.Scanner;
 
@@ -10,7 +8,8 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Welcome to the Student Management System");
 		EnrollmentManager enrollmentManager = new EnrollmentManager();
-		int opt,opt1;
+		int opt, opt1, opt2;
+		enrollmentManager.InitilizeEnroller();
 		while(true) {
 			System.out.println("1. Enroll");
 			System.out.println("2. List");
@@ -68,15 +67,30 @@ public class Main {
 							enrollmentManager.addCourse(code, title);
 							break;
 						case 3:
-							
-
-
+							enrollmentManager.enrollStudentToCourse();
 							break;
 					}					
 					break;
 				case 2:
+					enrollmentManager.listEnrollments();
 					break;
 				case 3:
+					opt2 = 0;
+					System.out.println("1. Search Student");
+					System.out.println("2. Search Course");
+					opt2 = sc.nextInt(); sc.nextLine();
+					switch (opt2) {
+						case 1:
+							System.out.print("Enter Student ID to search: ");
+							String searchId = sc.nextLine();
+							enrollmentManager.searchStudentById(searchId);
+							break;
+						case 2:
+							System.out.print("Enter Course Code to search: ");
+							String searchCode = sc.nextLine();
+							enrollmentManager.searchCourseByCode(searchCode);
+							break;
+					}
 					break;
 			}
 		}

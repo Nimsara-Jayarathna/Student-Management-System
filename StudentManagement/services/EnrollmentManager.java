@@ -13,6 +13,14 @@ public class EnrollmentManager {
     private int studentCount = 0;
     private int courseCount = 0;
 
+    public void InitilizeEnroller(){
+        for (int i = 0; i < 100; i++) {
+            for (int j = 0; j < 50; j++) {
+                enrollmentMatrix[i][j] = false;
+            }
+        }
+    }
+
     public int getStudentCount() {
         return studentCount;
     }
@@ -64,4 +72,34 @@ public class EnrollmentManager {
         System.out.println("Student " + students[studentIndex].getName() + " enrolled in course " + courses[courseIndex].getTitle() + " successfully.");
     }
 
+    public void listEnrollments() {
+        for ( int i = 0; i < studentCount; i++) {
+            System.out.println("Enrolled Courses of " + students[i].getName() + ":");
+            for (int j = 0; j < courseCount; j++) {
+                if (enrollmentMatrix[i][j]) {
+                    System.out.println(courses[j].toString());
+                }
+            }
+        }
+    }
+
+    public void searchStudentById(String id) {
+        for (int i = 0; i < studentCount; i++) {
+            if (students[i].getId() == id) {
+                System.out.println("Student found: " + students[i].toString());
+                return;
+            }
+        }
+        System.out.println("No student found with ID: " + id);
+    }
+
+    public void searchCourseByCode(String code) {
+        for (int i = 0; i < courseCount; i++) {
+            if (courses[i].getCode() == code) {
+                System.out.println("Course found: " + courses[i].toString());
+                return;
+            }
+        }
+        System.out.println("No course found with code: " + code);
+    }
 }

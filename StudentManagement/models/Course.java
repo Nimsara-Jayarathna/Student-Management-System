@@ -1,8 +1,5 @@
 package StudentManagement.models;
 
-import StudentManagement.mainapp.Main;
-import StudentManagement.models.Course;
-import StudentManagement.services.EnrollmentManager;
 
 public class Course {
     private String code;
@@ -12,7 +9,7 @@ public class Course {
         this.code = code;
         this.title = title;
     }
-    
+
     public String getCode(){
 	    return code;
     }
