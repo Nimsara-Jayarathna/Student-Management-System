@@ -49,7 +49,7 @@ public class EnrollmentManager {
 		for ( int i = 0; i < studentCount; i++) {
 			System.out.println((i + 1) + ". " + students[i].toString());
 		}
-		System.out.print("Select the number which the student details are displayed");
+		System.out.print("Select the number which the student details are displayed: ");
 		int studentIndex = sc.nextInt(); sc.nextLine();
 		studentIndex--; // Adjust for zero-based index
 		while (studentIndex < 0 || studentIndex >= studentCount) {
@@ -60,7 +60,7 @@ public class EnrollmentManager {
 		for ( int i = 0; i < courseCount; i++) {
 			System.out.println((i + 1) + ". " + courses[i].toString());
 	    }
-		System.out.print("Select the number which the course details are displayed");
+		System.out.print("Select the number which the course details are displayed: ");
 		int courseIndex = sc.nextInt(); sc.nextLine();
 		courseIndex--; // Adjust for zero-based index
 		while (courseIndex < 0 || courseIndex >= courseCount) {
@@ -72,13 +72,32 @@ public class EnrollmentManager {
         System.out.println("Student " + students[studentIndex].getName() + " enrolled in course " + courses[courseIndex].getTitle() + " successfully.");
     }
 
+    public void listStudents() {
+        for (int i = 0; i < studentCount; i++) {
+            System.out.println(students[i].toString());
+        }
+    }
+
+    public void listCourses() {
+        for (int i = 0; i < courseCount; i++) {
+            System.out.println(courses[i].toString());
+        }
+    }
+
+
     public void listEnrollments() {
+        int check = 0;
         for ( int i = 0; i < studentCount; i++) {
+            check = 0;
             System.out.println("Enrolled Courses of " + students[i].getName() + ":");
             for (int j = 0; j < courseCount; j++) {
                 if (enrollmentMatrix[i][j]) {
-                    System.out.println(courses[j].toString());
+                    check = 1;
+                    System.out.printf("\t" + courses[j].toString() + "\n");
                 }
+            }
+            if (check == 0) {
+                System.out.printf("\tNo courses enrolled.\n");
             }
         }
     }
@@ -101,5 +120,17 @@ public class EnrollmentManager {
             }
         }
         System.out.println("No course found with code: " + code);
+    }
+
+    public void sortStudentsByName(int count) {
+        for (int i = 0; i < count - 1; i++) {
+            for (int j = 0; j < count - i - 1; j++) {
+                if (students[j].getName().compareToIgnoreCase(students[j + 1].getName()) > 0) {
+                    Student temp = students[j];
+                    students[j] = students[j + 1];
+                    students[j + 1] = temp;
+                }
+            }
+        }
     }
 }
