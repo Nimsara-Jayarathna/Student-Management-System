@@ -41,7 +41,7 @@ StudentManagement/
 
 1. **Clone the Repository**  
    Open your terminal or command prompt and run the following command:  
-   <pre> ```bash git clone https://github.com/SLIIT-FacultyOfComputing/se2012-2025-s2-practical-02-NimsaraJayarathnaWA.git``` </pre>
+   ```bash git clone https://github.com/SLIIT-FacultyOfComputing/se2012-2025-s2-practical-02-NimsaraJayarathnaWA.git``` 
 
 2. **Navigate into the Project Folder**  
    Type:  
