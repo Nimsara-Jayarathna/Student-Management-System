@@ -37,10 +37,11 @@ StudentManagement/
 ### Prerequisites  
 - Java 8 or above  
 - Terminal or IDE 
+- Git (if not available download the repository as a zip file and extract, skip the step 1)
 
 1. **Clone the Repository**  
    Open your terminal or command prompt and run the following command:  
-   ```git clone https://github.com/SLIIT-FacultyOfComputing/se2012-2025-s2-practical-02-NimsaraJayarathnaWA.git```
+   <pre> ```bash git clone https://github.com/SLIIT-FacultyOfComputing/se2012-2025-s2-practical-02-NimsaraJayarathnaWA.git``` </pre>
 
 2. **Navigate into the Project Folder**  
    Type:  
