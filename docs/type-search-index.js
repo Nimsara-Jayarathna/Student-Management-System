@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"StudentManagement.models","l":"Course"},{"p":"StudentManagement.services","l":"EnrollmentManager"},{"p":"StudentManagement.mainapp","l":"Main"},{"p":"StudentManagement.models","l":"Student"}];updateSearchResults();
