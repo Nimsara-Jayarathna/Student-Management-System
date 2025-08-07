@@ -40,19 +40,19 @@ StudentManagement/
 
 1. **Clone the Repository**  
    Open your terminal or command prompt and run the following command:  
-   `git clone https://github.com/SLIIT-FacultyOfComputing/se2012-2025-s2-practical-02-NimsaraJayarathnaWA.git`
+   ```git clone https://github.com/SLIIT-FacultyOfComputing/se2012-2025-s2-practical-02-NimsaraJayarathnaWA.git```
 
 2. **Navigate into the Project Folder**  
    Type:  
-   `cd se2012-2025-s2-practical-02-NimsaraJayarathnaWA`
+   ```cd se2012-2025-s2-practical-02-NimsaraJayarathnaWA```
 
 3. **Compile the Java Files**  
    Make sure you are in the root directory (where `mainapp`, `models`, and `services` folders are visible), then run:  
-   `javac mainapp/Main.java models/*.java services/*.java`
+   ```javac mainapp/Main.java models/*.java services/*.java```
 
 4. **Run the Application**  
    After successful compilation, run the program using:  
-   `java mainapp.Main`
+   ```java mainapp.Main```
 
 
 ## 📝 JavaDoc Documentation
