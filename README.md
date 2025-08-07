@@ -1,9 +1,4 @@
-# 🧑‍🎓 Student Management System – Java Practical 2
-
-**Course**: SE2031 – Object Oriented Analysis and Design <br>
-**Institution**: Sri Lanka Institute of Information Technology (SLIIT)  
-**Semester**: 2, 2025  
-**Practical**: 2 – Classes, Packages, Control Structures, and JavaDoc
+# 🧑‍🎓 Student Management System
 
 ## ✅ Objective
 
@@ -44,12 +39,12 @@ StudentManagement/
 1. **Clone the Repository**  
    Open your terminal or command prompt and run the following command:  
    ```bash 
-   git clone https://github.com/SLIIT-FacultyOfComputing/se2012-2025-s2-practical-02-NimsaraJayarathnaWA.git
+   git clone https://github.com/Nimsara-Jayarathna/Student-Management-System.git
    ``` 
 
 2. **Navigate into the Project Folder**   
    ```
-   cd se2012-2025-s2-practical-02-NimsaraJayarathnaWA
+   cd Student-Management-System
    ```
 
 3. **Compile the Java Files**  
@@ -76,9 +71,12 @@ javadoc -d docs models/*.java services/*.java
 
 Then open `docs/index.html` in your browser.
 
-## 🧑‍💻 Student Information
+## 🧑‍💻 Developer Information
 
+- **Name**: Nimsara Jayarathna  
+- **GitHub Username**: [@Nimsara Jayarathna](https://github.com/Nimsara-Jayarathna)  
+- **Project**: Student Management System (Java)  
+- **Technologies**: Java, OOP, Packages, Control Structures, JavaDoc  
+- **Original Academic Submission**: SE2031 – Java Programming (SLIIT, 2025)
 
-- Student Name: Nimsara jayarathna 
-- Student ID Number: IT24103464
 
