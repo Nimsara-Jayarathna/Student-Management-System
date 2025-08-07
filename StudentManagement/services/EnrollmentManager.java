@@ -85,7 +85,7 @@ public class EnrollmentManager {
 
     public void searchStudentById(String id) {
         for (int i = 0; i < studentCount; i++) {
-            if (students[i].getId() == id) {
+            if (students[i].getId().equals(id)) {
                 System.out.println("Student found: " + students[i].toString());
                 return;
             }
@@ -95,7 +95,7 @@ public class EnrollmentManager {
 
     public void searchCourseByCode(String code) {
         for (int i = 0; i < courseCount; i++) {
-            if (courses[i].getCode() == code) {
+            if (courses[i].getCode().equals(code)) {
                 System.out.println("Course found: " + courses[i].toString());
                 return;
             }
