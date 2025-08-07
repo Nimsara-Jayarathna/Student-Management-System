@@ -62,9 +62,13 @@ StudentManagement/
 
 ## 📝 JavaDoc Documentation
 
+The full JavaDoc documentation for this project is available here:
+
+👉 [Student Management System JavaDoc](https://nimsara-jayarathna.github.io/Student-Management-System/)
+
 All public methods and classes are documented using JavaDoc comments.
 
-To generate JavaDoc:  
+To generate JavaDoc(already generate in the repo): 
 ```
 javadoc -d docs models/*.java services/*.java 
 ``` 
